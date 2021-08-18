@@ -8,5 +8,5 @@ from miscellaneouscodegen.miscellaneouscodegen import Template, TemplateCollecti
 from miscellaneouscodegen.unyt.dask_reductions import Reductions
 
 template_registry = {
-    "dask_reductions": Reductions
+    "dask_reductions": [Reductions]
 }

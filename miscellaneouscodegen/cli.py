@@ -21,8 +21,8 @@ def main():
 )
 def generate(filename, template_type, header):
     if template_type in template_registry.keys():
-        template_obj = template_registry[template_type]()
-        template_obj.write(filename, header)
+        for temp_obj in template_registry[template_type]:
+            temp_obj().write(filename, header)
         print(f"wrote reductions to {filename}")
     else:
         raise ValueError("template_type must be a registered template")

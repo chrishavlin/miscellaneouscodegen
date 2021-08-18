@@ -8,7 +8,7 @@ class TemplateCollection:
     def write(self, filename, header=None):
         with open(filename, 'w') as fi:
             if header:
-                fi.write(header)
+                fi.write(header+"\n\n\n")
 
             for ntemp, t in enumerate(self.list_of_templates):
                 if len(t.filled_template) == 0:
